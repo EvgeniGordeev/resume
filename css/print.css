@@ -1,0 +1,52 @@
+:root {
+    --color-white: #FFFFFF;
+}
+
+html {
+    /*background-color: var(--color-white) !important;*/
+    background-color: #FFFFFF !important;
+}
+
+body.content {
+    /*background-color: var(--color-white) !important;*/
+    background-color: #FFFFFF !important;
+    -webkit-print-color-adjust: exact;
+}
+
+nav + .container {
+    background-color: var(--color-white) !important;
+    padding-top: 10px;
+}
+
+nav {
+    display: none;
+}
+
+.collapse {
+    display: block;
+}
+
+hr {
+    margin: 0;
+}
+
+.container {
+    border: none
+}
+
+.lost-kitten {
+    display: none;
+}
+
+.web {
+    display: none !important;
+}
+
+.print img {
+    display: inline-block !important;
+    margin-top: 22px;
+}
+
+.print, .print {
+    display: block !important;
+}

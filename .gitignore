@@ -1,0 +1,76 @@
+######################
+# Node
+######################
+node_modules/
+
+######################
+# Intellij
+######################
+.idea
+*.iml
+*.ipr
+
+######################
+# Package Files
+######################
+*.jar
+*.war
+*.ear
+*.db
+
+######################
+# Windows
+######################
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+######################
+# Mac OSX
+######################
+.DS_Store
+.svn
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+######################
+# Directories
+######################
+/bin/**
+/spring_loaded/**
+/deploy/**
+
+######################
+# Logs
+######################
+*.log
+
+######################
+# Others
+######################
+*.class
+*.*~
+*~
+.merge_file*
+
+######################
+# Bower
+######################
+web/bower_components
+
+
+######################
+# Local Config files
+######################
+*.local*.properties
+*.local*.yml
+*.local*.yaml
+*.local*.json
+*.version

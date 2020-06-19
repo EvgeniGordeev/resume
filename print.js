@@ -10,7 +10,7 @@ const puppeteer = require('puppeteer');
         }
     )
     await page.pdf({
-        path: 'Evgeni_Gordeev_CV.pdf',
+        path: 'downloads/Evgeni_Gordeev_CV.pdf',
         printBackground: true,
         preferCSSPageSize: true,
         // width: '1080px',

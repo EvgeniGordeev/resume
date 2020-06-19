@@ -74,3 +74,4 @@ web/bower_components
 *.local*.yaml
 *.local*.json
 *.version
+print.pdf

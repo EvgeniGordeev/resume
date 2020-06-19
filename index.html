@@ -30,7 +30,9 @@
     <meta name="theme-color" content="#ffffff">
     <!--end: very verbose favicon-->
 
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--    get rid of media print in the default bootstrap-->
+    <link href="css/bootstrap-v3.4.1.min.css" rel="stylesheet">
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/all.css?version=0002" rel="stylesheet" media="all">
     <script>
@@ -53,8 +55,8 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                 <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
-                    class="icon-bar"></span> <span
-                    class="icon-bar"></span></button>
+                class="icon-bar"></span> <span
+                class="icon-bar"></span></button>
             <a class="navbar-brand" href="#">Evgeni Gordeev</a></div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -74,14 +76,14 @@
     </div>
     <div class="row">
         <div class="web col-md-3 col-sm-4 col-xs-4">
-            <img class="img-thumbnail img-responsive" alt="Evgeni Gordeev" title="Evgeni Gordeev" src="images/Evgeni Gordeev.png">
+            <img class="img-thumbnail img-responsive" alt="Evgeni Gordeev" title="Evgeni Gordeev" src="images/Evgeni_Gordeev.png">
         </div>
         <div class="print col-md-3 col-sm-4 col-xs-4">
-            <img class="img-thumbnail img-responsive" alt="Evgeni Gordeev" title="Evgeni Gordeev" src="images/Evgeni Gordeev.jpg">
+            <img class="img-thumbnail img-responsive photo" alt="Evgeni Gordeev" title="Evgeni Gordeev" src="images/Evgeni_Gordeev.jpg">
         </div>
         <div class="col-md-9 col-sm-8 col-xs-12">
 
-            <h3>Application Architect</h3>
+            <h3>Principal Engineer</h3>
             <h4><i>Java | DevOps | AWS | Kubernetes</i></h4>
 
             <p><span><i class="fa fa-home"></i></span><span>Eden Prairie, MN</span></p>
@@ -91,12 +93,13 @@
             </p>
 
             <p><span><i class="fa fa-phone"></i></span><span><a href="tel:+16123520233">(612) 352-0233</a></span></p>
+            <p><span><i class="fa fa-github"></i></span><span><a href="https://github.com/EvgeniGordeev">https://github.com/EvgeniGordeev</a></span></p>
 
             <p class="print">
-                <span><i class="fa fa-anchor"></i></span><span><a href="http://evgeni-gordeev-resume.s3-website-us-east-1.amazonaws.com" target="_blank">Web Resume</a></span>
+                <span><i class="fa fa-anchor"></i></span><span><a href="https://evgenigordeev.github.io/resume/" target="_blank">https://evgenigordeev.github.io/resume/</a></span>
             </p>
             <p class="print">
-                <span><i class="fa fa-linkedin" aria-hidden="true"></i></span><span><a href="http://www.linkedin.com/in/egordeev" target="_blank">LinkedIn Profile</a></span>
+                <span><i class="fa fa-linkedin" aria-hidden="true"></i></span><span><a href="https://www.linkedin.com/in/egordeev" target="_blank">https://www.linkedin.com/in/egordeev</a></span>
             </p>
 
         </div>
@@ -111,7 +114,7 @@
                 <p>
                     I am a leader/doer with 10+ years of full-stack development experience proved by Sun/Oracle/Amazon
                     certificates and expertise in the design, development and deployment of enterprise-level N-tier
-                    architecture utilizing Java/Python/Kubernetes/AWS platforms.
+                    architecture utilizing Java/Python/Kubernetes/AWS.
                 </p>
                 <p>I am passionate for designing and building scalable solutions for a diverse set of business domains.
                 </p>
@@ -164,23 +167,22 @@
         <div class="col-md-12">
             <p id="skills">
                 <button type="button" class="btn btn-primary btn-lg">AWS</button>
-                <button type="button" class="btn btn-primary btn-lg">Docker</button>
-                <button type="button" class="btn btn-primary btn-lg">Continuous Integration</button>
-                <button type="button" class="btn btn-primary btn-lg">Continuous Delivery</button>
+                <button type="button" class="btn btn-primary btn-lg">Kubernetes</button>
+                <button type="button" class="btn btn-primary btn-lg">DevOps</button>
                 <button type="button" class="btn btn-primary btn-lg">Java</button>
                 <button type="button" class="btn btn-primary btn-lg">Spring Boot</button>
                 <button type="button" class="btn btn-primary btn-lg">Spring</button>
-                <button type="button" class="btn btn-primary btn-lg">Hibernate</button>
-                <button type="button" class="btn btn-primary btn-lg">AngularJS</button>
-                <button type="button" class="btn btn-primary btn-lg">J2EE</button>
+                <button type="button" class="btn btn-primary btn-lg">Shell</button>
+                <button type="button" class="btn btn-info">Hibernate</button>
                 <button type="button" class="btn btn-info">Maven</button>
-                <button type="button" class="btn btn-info">Bamboo</button>
+                <button type="button" class="btn btn-info">GitLab</button>
                 <button type="button" class="btn btn-info">NodeJS</button>
                 <button type="button" class="btn btn-info">MySQL</button>
                 <button type="button" class="btn btn-info">Jenkins</button>
                 <button type="button" class="btn btn-info">Oracle DB</button>
                 <button type="button" class="btn btn-info">Tomcat</button>
                 <button type="button" class="btn btn-info">JBoss AS</button>
+                <button type="button" class="btn btn-info">WildFly</button>
                 <button type="button" class="btn btn-info">Jetty</button>
                 <button type="button" class="btn btn-success">Javascript</button>
                 <button type="button" class="btn btn-success">JQuery</button>
@@ -191,12 +193,12 @@
                 <button type="button" class="btn btn-warning">Intellij IDEA</button>
                 <button type="button" class="btn btn-warning">Eclipse</button>
                 <button type="button" class="btn btn-warning">Jira</button>
-                <button type="button" class="btn btn-warning">Crucible/Fisheye</button>
+                <!--                <button type="button" class="btn btn-warning">Crucible/Fisheye</button>-->
                 <button type="button" class="btn btn-warning">JIRA</button>
+                <button type="button" class="btn btn-default btn-sm">AngularJS</button>
                 <button type="button" class="btn btn-default btn-sm">Git</button>
                 <button type="button" class="btn btn-default btn-sm">CVS</button>
                 <button type="button" class="btn btn-default btn-sm">SVN</button>
-                <button type="button" class="btn btn-default btn-sm">Shell</button>
             </p>
         </div>
     </div>
@@ -206,7 +208,56 @@
     </div>
     <hr/>
     <div class="row">
-        <div class="col-md-3"><p class="lead date"> July 2014 - Present </p></div>
+        <div class="col-md-3"><p class="lead date"> June 2017 - Present </p></div>
+        <div class="col-md-9"><p class="lead"> Principal Engineer </p>
+            <dl class="dl-horizontal jobdetails">
+                <dt> Company</dt>
+                <dd><a href="https://conservis.ag">Conservis</a></dd>
+            </dl>
+            <h4 class='hidden-xs'>In charge of</h4>
+            <ul>
+                <li> Architectural long-term direction</li>
+                <li> AWS infrastructure</li>
+                <li> CI/CD set up and guidelines</li>
+                <li> Integration and refactoring</li>
+                <li> QA Automation oversight</li>
+                <li> 3rd party dependencies upgrade</li>
+                <li> Open source contribution</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapsePlt"> Platform - RowCrop & PermCrop </a>
+                    </h4></div>
+                <div id="collapsePlt" class="panel-collapse collapse">
+                    <div class="panel-body"><p>
+                        <a target="_blank" href="https://conservis.ag/farm-management-software/row-crop-management-software/"> Row Crop</a> is a Farm Management System
+                        to track various crops throughout different stages - Production, Planning, Harvest.
+                        <ul>
+                            <li> Infrastructure-as-a-Code implementation</li>
+                            <li> 3rd party libraries upgrade</li>
+                            <li> DevOps & Reliability support</li>
+                            <li> Monolith decomposition</li>
+                        </ul>
+                        <h5><i class="fa fa-cogs"></i>Environment</h5>
+                        <dl class="dl-horizontal">
+                            <dt> Tools</dt>
+                            <dd> GitLab, AWS, Kubernetes</dd>
+                            <dt> Techs</dt>
+                            <dd> Spring Boot, ReactJS, Django
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"><p class="lead date"> July 2014 - June 2017 </p></div>
         <div class="col-md-9"><p class="lead"> Application Architect </p>
             <dl class="dl-horizontal jobdetails">
                 <dt> Company</dt>
@@ -340,7 +391,7 @@
                             manual
                             code analysis, identifying possible refactoring/improvements areas, evaluating adherence of
                             the code basis to best development practices. </p> <h5><i
-                                class="fa fa-cogs"></i>Environment</h5>
+                            class="fa fa-cogs"></i>Environment</h5>
                         <dl class="dl-horizontal">
                             <dt> Tools</dt>
                             <dd> Maven, SonarQube, FindBugs, Check, PMD, Code Coverage</dd>
@@ -843,7 +894,7 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <!--Bootstrap-->
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <!-- Angular Material requires Angular.js Libraries -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
@@ -855,11 +906,11 @@
 
 <!-- Resume bootstrap  -->
 <script type="text/javascript">
-    angular.module('ResumeApp', ['ngMaterial']).config(function($mdThemingProvider) {
+    angular.module('ResumeApp', ['ngMaterial']).config(function ($mdThemingProvider) {
         $mdThemingProvider.theme('default')
-                .primaryPalette('green')
-                .accentPalette('orange');
-    }).controller('LanguageCtrl', function($scope) {
+            .primaryPalette('green')
+            .accentPalette('orange');
+    }).controller('LanguageCtrl', function ($scope) {
 
         $scope.language = {
             english: 93,

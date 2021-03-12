@@ -1,0 +1,96 @@
+:root {
+    --color-green: #68be9f;
+}
+
+.panel-default > .panel-heading:hover {
+    /*background-color: var(--color-green);*/
+    background-color: #68be9f;
+}
+
+html {
+    /*background-color: var(--color-green);*/
+    background-color: #68be9f;
+}
+
+.date, .jobdetails {
+    color: #666;
+}
+
+div > p.date {
+    text-align: right;
+}
+
+.ed-date, .ed-minsk {
+    display: none;
+}
+
+.ed-minsk + hr {
+    display: none;
+}
+
+.category, .navbar-brand {
+    /*color: var(--color-green) !important;*/
+    color: #68be9f !important;
+}
+
+.lead {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.fa {
+    margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+    .name {
+        font-size: 2em;
+    }
+
+    .category {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 600px) {
+    .col-xs-4 {
+        width: 60%;
+    }
+
+}
+
+body.content {
+    /*background-color: var(--color-green);*/
+    background-color: #68be9f;
+    padding-top: 70px;
+}
+
+nav + .container {
+    background-color: #FFFFFF;
+    padding-top: 10px;
+}
+
+nav {
+    background-color: #000000;
+}
+
+#skills * {
+    margin: 4px;
+}
+
+.bs-example:after {
+    content: attr(data-lang);
+}
+
+.print {
+    display: none !important;
+}
+
+.lost-kitten {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding-top: 40px
+}

@@ -6,14 +6,17 @@
     "node_modules"
   ],
   "devDependencies": {
-    "http-server": "0.12.3",
-    "puppeteer": "4.0.0"
+    "bl": "6.0.9",
+    "lodash": "4.17.21",
+    "http-server": "14.1.1",
+    "puppeteer": "21.6.0"
   },
   "engines": {
-    "node": "^12.0"
+    "node": ">16.0"
   },
   "scripts": {
-    "prestart": "yarn install",
+    "clean": "rm -rf node_modules/",
+    "prestart": "npm install",
     "start": "node ./node_modules/.bin/http-server ./ -o -p 3001",
     "print": "node print.js"
   }

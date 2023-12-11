@@ -1,14 +1,17 @@
+/*jshint esversion: 11 */
+/*jshint node: true */
 const puppeteer = require('puppeteer');
 
 (async () => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
+    "use strict";
+    const browser = await puppeteer.launch(),
+        page = await browser.newPage();
     await page.goto('http://localhost:3001?print', {waitUntil: 'networkidle2'});
     await page.addStyleTag(
         {
             content: 'div.print img.photo { width: 200px;}'
         }
-    )
+    );
     await page.pdf({
         path: 'downloads/Evgeni_Gordeev_CV.pdf',
         printBackground: true,

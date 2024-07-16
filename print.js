@@ -12,17 +12,18 @@ const puppeteer = require('puppeteer');
             content: 'div.print img.photo { width: 200px;}'
         }
     );
+    let margin = "0.33in";
     await page.pdf({
         path: 'downloads/Evgeni_Gordeev_CV.pdf',
         printBackground: true,
         preferCSSPageSize: true,
-        // width: '1080px',
         format: 'Letter',
+        scale: 0.95, // prevent spilling language skills to extra page
         margin: {
-            top: "0.4in",
-            right: "0.4in",
-            bottom: "0.4in",
-            left: "0.4in"
+            top: margin,
+            right: margin,
+            bottom: margin,
+            left: margin
         }
     });
 

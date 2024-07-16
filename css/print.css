@@ -11,6 +11,7 @@ body.content {
     /*background-color: var(--color-white) !important;*/
     background-color: #FFFFFF !important;
     -webkit-print-color-adjust: exact;
+    padding-top: 5px;
 }
 
 nav + .container {
@@ -47,6 +48,18 @@ hr {
     margin-top: 22px;
 }
 
-.print, .print {
-    display: block !important;
+/*.print {*/
+/*    display: block !important;*/
+/*}*/
+
+div.print {
+    display: none !important;
+}
+
+div.education {
+    display: none;
+}
+
+.pagebreak {
+    page-break-before: always;
 }

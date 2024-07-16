@@ -21,11 +21,11 @@ div > p.date {
 }
 
 .ed-date, .ed-minsk {
-    display: none;
+    display: block;
 }
 
 .ed-minsk + hr {
-    display: none;
+    display: block;
 }
 
 .category, .navbar-brand {

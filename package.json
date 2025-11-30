@@ -9,14 +9,15 @@
     "bl": "6.1.5",
     "lodash": "4.17.21",
     "puppeteer": "24.31.0",
-    "rimraf": "6.1.2"
+    "rimraf": "6.1.2",
+    "serve": "^14.2.5"
   },
   "engines": {
     "node": ">22.0"
   },
   "scripts": {
     "clean": "rimraf node_modules/",
-    "start": "npx --yes http-server@latest ./ -o -a localhost -p 3001",
+    "start": "DEBUG=* serve ./ -l 3001",
     "print": "node print.js"
   }
 }

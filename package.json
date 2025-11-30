@@ -6,18 +6,17 @@
     "node_modules"
   ],
   "devDependencies": {
-    "bl": "6.0.13",
+    "bl": "6.1.5",
     "lodash": "4.17.21",
-    "http-server": "14.1.1",
-    "puppeteer": "22.12.1",
-    "rimraf": "5.0.8"
+    "puppeteer": "24.31.0",
+    "rimraf": "6.1.2"
   },
   "engines": {
-    "node": ">16.0"
+    "node": ">22.0"
   },
   "scripts": {
     "clean": "rimraf node_modules/",
-    "start": "http-server ./ -o -a localhost -p 3001",
+    "start": "npx --yes http-server@latest ./ -o -a localhost -p 3001",
     "print": "node print.js"
   }
 }

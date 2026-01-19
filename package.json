@@ -12,12 +12,14 @@
     "rimraf": "6.1.2",
     "serve": "^14.2.5"
   },
+  "packageManager": "pnpm@10.2.1",
   "engines": {
     "node": ">22.0"
   },
   "scripts": {
     "clean": "rimraf node_modules/",
     "start": "DEBUG=* serve ./ -l 3001",
-    "print": "node print.js"
+    "print": "node print.js",
+    "postinstall": "puppeteer browsers install chrome"
   }
 }

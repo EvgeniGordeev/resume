@@ -1,0 +1,419 @@
+{
+  "name": "Evgeni Gordeev",
+  "title": "Principal Engineer",
+  "tagline": "Java | DevOps | AWS | Kubernetes | Python",
+  "photo": "images/Evgeni_Gordeev.jpg",
+  "favicon": "icons/favicon-96x96.png",
+  "pdf": "downloads/Evgeni_Gordeev_CV.pdf",
+  "contact": {
+    "location": "Twin Cities, MN",
+    "email": "evgeni.gordeev@gmail.com",
+    "phone": "(612) 460-0747",
+    "phone_uri": "+16124600747",
+    "github": "https://github.com/EvgeniGordeev",
+    "linkedin": "https://www.linkedin.com/in/egordeev",
+    "website": "https://evgenigordeev.github.io/resume/"
+  },
+  "summary": [
+    "I'm a quick learner who thrives in the gray areas of problem-solving and embraces ambiguity head-on. I enjoy taking full ownership of projects, from conception to production, constantly seeking opportunities to automate, optimize, and improve existing solutions.",
+    "My work is customer-centered - I want users to love their experience with the products as much as I enjoy coding for them. With colleagues, I embrace differences and debates as opportunities to move forward and get ~~things~~ shit done.",
+    "From designing Cloud (AWS) and on-prem solutions to mentoring teams and streamlining legacy systems, I've built my career on being resourceful, resilient, and adaptable.",
+    "Passionate about infrastructure maintenance, automation, and site reliability, and experienced in Java, Python, AWS, Kubernetes, and CI/CD, I am seeking opportunities in a fast-paced environment with strong leadership that nurtures autonomy and trust, where I can make a meaningful impact."
+  ],
+  "skills": [
+    {
+      "tier": "primary",
+      "items": [
+        "AWS",
+        "Kubernetes",
+        "DevOps",
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "tier": "info",
+      "items": [
+        "GitLab CI/CD",
+        "Site Reliability",
+        "Disaster Recovery",
+        "Spring Boot",
+        "Hibernate",
+        "Maven",
+        "Gradle",
+        "Postgres",
+        "Shell"
+      ]
+    },
+    {
+      "tier": "success",
+      "items": [
+        "MySQL",
+        "Jenkins",
+        "Oracle DB",
+        "Tomcat",
+        "JBoss AS",
+        "WildFly",
+        "Jetty",
+        "Javascript",
+        "REST"
+      ]
+    },
+    {
+      "tier": "warning",
+      "items": [
+        "AngularJS",
+        "NodeJS",
+        "JQuery",
+        "HTML5",
+        "CSS3",
+        "Bootstrap"
+      ]
+    },
+    {
+      "tier": "default",
+      "items": [
+        "Intellij IDEA",
+        "Eclipse",
+        "Jira",
+        "Git",
+        "CVS",
+        "SVN"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "date": "June 2017 - Present",
+      "role": "Principal Engineer",
+      "company": "Traction AG (aka Conservis before 2024 aquisition)",
+      "url": "https://tractionag.com",
+      "heading": "In charge of",
+      "duties": [
+        "Architectural long-term direction",
+        "AWS infrastructure and Kubernetes cluster support",
+        "Site Reliability, Observability, Logging, Monitoring, and Disaster Recovery",
+        "CI/CD (GitLab/GitHub) implementation, guidelines and maintenance",
+        "Refactoring and Integration",
+        "3rd party dependencies upgrade",
+        "Open source contribution"
+      ],
+      "projects": [
+        {
+          "name": "Platform - RowCrop & PermCrop",
+          "description": "Row Crop is a Farm Management System to track various crops throughout different stages - Production, Planning, Harvest.",
+          "url": "https://conservis.ag/farm-management-software/row-crop-management-software/",
+          "url_label": "Row Crop",
+          "highlights": [
+            "Infrastructure-as-a-Code implementation",
+            "3rd party libraries/Java upgrade and refactoring",
+            "DevOps & Reliability support",
+            "Monolith decomposition",
+            "QA Automation framework inception",
+            "SSO/Identity implementation",
+            "Service Discovery implementation"
+          ],
+          "env": {
+            "tools": "GitLab, AWS, Kubernetes",
+            "techs": "Spring Boot, ReactJS, Django"
+          }
+        },
+        {
+          "name": "Open Source Contribution",
+          "highlights_as_links": [
+            {
+              "label": "keycloak",
+              "url": "https://github.com/keycloak/keycloak/issues?q=is%3Aissue+author%3AEvgeniGordeev+"
+            },
+            {
+              "label": "oauth2-proxy",
+              "url": "https://github.com/oauth2-proxy/oauth2-proxy/pulls?q=is%3Apr+author%3AEvgeniGordeev"
+            },
+            {
+              "label": "cytopia/docker-bind",
+              "url": "https://github.com/cytopia/docker-bind/issues/20"
+            },
+            {
+              "label": "Conservis kube-asg-node-drainer",
+              "url": "https://github.com/Conservis/kube-asg-node-drainer"
+            },
+            {
+              "label": "django-oidc-provider",
+              "url": "https://github.com/juanifioren/django-oidc-provider/pull/329"
+            },
+            {
+              "label": "workaround to debug multiple AWS Lambdas locally",
+              "url": "https://github.com/aws/aws-sam-cli/issues/6546#issuecomment-4106882891"
+            },
+            {
+              "label": "GitLab pipeline trigger",
+              "url": "https://gitlab.com/finestructure/pipeline-trigger/-/merge_requests?scope=all&utf8=%E2%9C%93&state=closed&author_username=egordeev"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "July 2014 - June 2017",
+      "role": "Application Architect",
+      "company": "Coherent Solutions Inc.",
+      "url": "https://coherentsolutions.com",
+      "heading": "Responsibilities",
+      "duties": [
+        "Performing all phases of software engineering including requirements analysis, application design, code development and testing",
+        "Architectural assessment of legacy applications",
+        "Providing technical support to Sales Team",
+        "Implementing POC applications",
+        "Expanding DevOps practices",
+        "Responsible for Continuous Integration/Continuous Delivery",
+        "Setting code quality standards",
+        "Managing team, mitigating risks and issues",
+        "Reviewing code and providing feedback relative to best practices"
+      ],
+      "projects": [
+        {
+          "name": "ServeMinnesota - RCDMS",
+          "description": "Reading Corps is a breakthrough program that is changing academic outcomes for thousands of students. With more than 1,500 tutors serving in eight states and Washington D.C., Reading Corps is helping more than 36,000 children each year become successful readers.",
+          "url": "http://www.readingcorps.org/",
+          "url_label": "Reading Corps",
+          "highlights": [
+            "Designed the architecture",
+            "Prepared project structure",
+            "Set up Continuous Integration/Continuous Delivery"
+          ],
+          "env": {
+            "tools": "GitHub, Amazon Web Services, Docker",
+            "techs": "Spring Boot, JHipster, Spring Security, AngularJS, NodeJS, Hibernate, REST API"
+          }
+        },
+        {
+          "name": "Element Consulting",
+          "description": "Element Consulting together with Twin Cities Orthopedics are creating an application to leverage Bundle Payments for Care Improvement initiative.",
+          "highlights": [
+            "Designed the architecture",
+            "Prepared project structure",
+            "Set up Continuous Integration",
+            "Executed code reviews"
+          ],
+          "env": {
+            "tools": "BitBucket, Amazon Web Services, Docker",
+            "techs": "Spring Boot, JHipster, Spring Security, AngularJS, NodeJS, Hibernate, LiquiBase, REST API"
+          }
+        },
+        {
+          "name": "Graco/Matrix",
+          "description": "Graco provides products for painting, anti-corrosion, fluid transfer, gluing and sanitary applications for markets like automotive, aeronautic, body refinishing, wood, build and construction, and marine. Matrix Total Fluid Management System provides automated tracking and monitoring plus state-of-the-art dispensing for complete control of your fluid inventory.",
+          "url": "http://www.graco.com/",
+          "url_label": "Graco",
+          "highlights": [
+            "Refactored old code basis to adhere to modern know-hows and frameworks",
+            "Was implementing and leading the effort from Swing to Web UI, Spring 2 to Spring Boot",
+            "Set up Continuous Integration",
+            "Executed code reviews"
+          ],
+          "env": {
+            "tools": "MySQL, SVN, GitHub, Jetty, Maven, Ant, Bamboo, Jira",
+            "techs": "Servlets, Spring Boot, Spring IOC, Spring security, Hibernate, AngularJS, NodeJS, Bootstrap"
+          }
+        },
+        {
+          "name": "NMDP",
+          "description": "National Marrow Donor Program (NMDP) also known as Be The Match® is a global leader in bone marrow transplantation. Evgeni was leading effort of providing architectural assessment of several projects implemented in-house. A detailed system review was conducted including static and manual code analysis, identifying possible refactoring/improvements areas, evaluating adherence of the code basis to best development practices.",
+          "url": "https://bethematch.org/",
+          "url_label": "NMDP",
+          "env": {
+            "tools": "Maven, SonarQube, FindBugs, Check, PMD, Code Coverage",
+            "techs": "J2EE/Servlets/JSP, Spring, Spring Security, Oracle"
+          }
+        }
+      ]
+    },
+    {
+      "date": "June 2011 - June 2014",
+      "role": "Team Lead",
+      "company": "Coherent Solutions Inc.",
+      "url": "https://coherentsolutions.com",
+      "heading": "Responsibilities",
+      "duties": [
+        "Performing design, development, legacy maintenance and bug fixing",
+        "Managing team, tracking progress of task completion, milestones, action items, risks, issues, conducting update meetings",
+        "Executing code review and staff mentoring"
+      ],
+      "projects": [
+        {
+          "name": "API Outsourcing",
+          "description": "API Outsourcing is a Finance and Accounting Outsourcing (FAO) company which offers a wide breadth of services for accounts payable, document management and bill presentment needs.",
+          "highlights": [
+            "Developed Web Form feature (flexible configurable screen configuration to create/update new POJO entities added on the fly)",
+            "Implemented HTML5 responsive design (one application aimed on multiple platforms)",
+            "Implemented UI cached navigation for tables to gain performance",
+            "Enhanced screen form configuration with inheritance",
+            "Forked 3rd party open-source library Hibernate Audit with custom features and fixes"
+          ],
+          "env": {
+            "tools": "MySQL 5.6, CVS, Jboss AS 7, Maven 3, Ant 1.9",
+            "techs": "J2EE 6/Servlets/JSP, Spring 4, Spring Security, Apache Tiles 3, Hibernate 4, JavaScript / JQuery 1.10"
+          }
+        },
+        {
+          "name": "Intercap",
+          "description": "Intercap owns and deploys a U.S. Patented, state-of-the-art, artificial intelligence-based energy monitoring, reporting and management system called \"The Intelligent Use of Energy\" or IUE™.",
+          "env": {
+            "tools": "MS SQL, Postgres, SVN, Tomcat 7, Maven, Ant",
+            "techs": "J2EE/Servlets/JSP, Spring, Spring Security, Ibatis"
+          }
+        },
+        {
+          "name": "Datalogics/ECCS Account Management Tool",
+          "description": "Datalogics is the premiere Adobe partner for licensing PDF Toolkits to software developers and provides end-to-end tools to publishers and developers to support Adobe's rich eBook ecosystem.",
+          "env": {
+            "tools": "HSQLDB 2.2.9, Github, Tomcat 7, Maven 3, Ant 1.9",
+            "techs": "J2EE/Servlets/JSP, Spring, Spring Security, Hibernate, Jquery, Jquery Datagrid"
+          }
+        },
+        {
+          "name": "PeopleNet",
+          "description": "The system works with on-board computers on vehicles, collects information about cars and drivers, analyzes the information and put the results to database.",
+          "env": {
+            "tools": "Liferay, Karaf, MSSQL 2008, Maven, Ant",
+            "techs": "J2EE/Servlets/JSP, Javascript, GWT, Hibernate, Spring"
+          }
+        }
+      ]
+    },
+    {
+      "date": "August 2010 - May 2011",
+      "role": "Senior Java Developer",
+      "company": "Information Technology Alliance (ITA)",
+      "heading": "Responsibilities",
+      "duties": [
+        "Performing design, development, legacy maintenance and bug fixing",
+        "Executing code review and staff mentoring"
+      ],
+      "projects": [
+        {
+          "name": "Standard Bank",
+          "description": "The Standard Bank of South Africa Limited is one of South Africa's largest financial services groups. It operates in 32 countries around the world, including 19 in Africa. Our team developed CRM Web Application for bank agents.",
+          "highlights": [
+            "Performing UI development utilizing GWT",
+            "Managing team (up to 3 persons) – plan tracking, task estimation, mentoring"
+          ],
+          "env": {
+            "tools": "Maven 2/3, Jira, Eclipse, SVN",
+            "techs": "Java, Javascript, GWT"
+          }
+        }
+      ]
+    },
+    {
+      "date": "Jan 2008 - July 2010",
+      "role": "Java Developer",
+      "company": "Navagate Inc.",
+      "url": "http://navagate.com",
+      "heading": "Responsibilities",
+      "duties": [
+        "Performing design, development, legacy maintenance and bug fixing",
+        "Executing code review and staff mentoring"
+      ],
+      "projects": [
+        {
+          "name": "Agility™ 3.1 - 4.0",
+          "description": "CRM Server Application for Insurance business.",
+          "highlights": [
+            "Implemented JDBC-to-Hibernate and FormDesc-to-JSF transition",
+            "Executed customization and integration",
+            "Micromanagement of Team (up to 3 persons) – plan tracking, task estimation, mentoring"
+          ],
+          "env": {
+            "tools": "Maven 2, Jira, FishEye, Crucible, Servers: WebSphere, Apache Tomcat, Oracle 10g, MS SQL 2005",
+            "techs": "Java 1.6, JSP, Servlets, Spring, Spring Webflow, JSF, RichFaces, Hibernate; AJAX, DHTML, JavaScript, CSS; SQL, PL/SQL"
+          }
+        }
+      ]
+    },
+    {
+      "date": "June 2007 - Dec 2007",
+      "role": "QA Engineer",
+      "company": "Navagate Inc.",
+      "url": "http://navagate.com",
+      "heading": "Responsibilities",
+      "duties": [
+        "Performing Smoke, Functional and Regression Testing",
+        "Fulfilling Test Case Design and Update"
+      ],
+      "projects": [
+        {
+          "name": "NY Life Party, NY Life Investments",
+          "description": "Customization of Agility™ - CRM Server Application for Insurance business.",
+          "env": {
+            "tools": "Lotus Notes"
+          }
+        }
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "date": "Apr. 2017",
+      "name": "AWS Certified SysOps Administrator – Associate",
+      "issuer": "Amazon Web Services"
+    },
+    {
+      "date": "Mar. 2017",
+      "name": "AWS Certified Developer – Associate",
+      "issuer": "Amazon Web Services"
+    },
+    {
+      "date": "Oct. 2016",
+      "name": "AWS Certified Solutions Architect - Associate",
+      "issuer": "Amazon Web Services"
+    },
+    {
+      "date": "Apr. 2011",
+      "name": "Oracle Certified Professional, Java EE 5 Web Component Developer",
+      "issuer": "Oracle",
+      "url": "https://www.youracclaim.com/badges/ec755c8b-49e2-4e0e-8029-fbd39d246866"
+    },
+    {
+      "date": "Oct. 2009",
+      "name": "Sun Certified Java Programmer, Java SE 6 (SCJP)",
+      "issuer": "Sun Microsystems"
+    }
+  ],
+  "education": [
+    {
+      "date": "2006 - 2010",
+      "school": "University of Informatics and Radioelectronics (BSUIR)",
+      "major": "Programming in Economics"
+    },
+    {
+      "date": "2003 - 2008",
+      "school": "Minsk State Linguistic University",
+      "major": "Translating (German, English, Dutch)"
+    },
+    {
+      "date": "Oct - Dec 2007",
+      "school": "Java Training at Navagate Inc.",
+      "major": "Java (Java API, JDK, JVM), J2EE, JavaBeans, JSP, Servlets, JDBC, Spring, Hibernate, OO Programming and Design (UML, OO patterns (GoF), Sun Java Coding Conventions), Unit and Integration testing, Apache Tomcat",
+      "description": "During this training I participated in developing training server application \"IT-Library\". This web application was intended to store relevant information about G2X books, magazines, video, audio etc. in a database and to provide an interface for user who can log in to application through browser, order library items, apply for new editions and manage personal settings like notifications, library news posting."
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": 97
+    },
+    {
+      "name": "German",
+      "level": 60
+    },
+    {
+      "name": "Dutch",
+      "level": 40
+    },
+    {
+      "name": "Russian",
+      "level": 99
+    }
+  ]
+}

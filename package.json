@@ -20,6 +20,8 @@
     "clean": "rimraf node_modules/",
     "start": "DEBUG=* serve ./ -l 3001",
     "print": "node print.js",
+    "yaml2json": "yq -o=json resume.yml > resume.json",
+    "yaml2md": "npm run yaml2json && node resume2md.js",
     "postinstall": "puppeteer browsers install chrome"
   }
 }

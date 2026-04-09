@@ -1,0 +1,28 @@
+html, body { background: #fff !important; }
+
+body {
+    padding-top: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+nav { display: none; }
+
+.container { padding: 10px 0; box-shadow: none; }
+
+.web-only { display: none !important; }
+.print-only { display: block !important; }
+p.print-only { display: block !important; }
+
+details { border: none; }
+details[open] summary { background: transparent; }
+details .panel-body { padding: 4px 0 4px 14px; }
+details:not([open]) { display: none; }
+
+.education { display: none; }
+
+.pagebreak { page-break-before: always; }
+
+hr { margin: 3px 0; }
+
+.section-title { margin: 10px 0 2px; }

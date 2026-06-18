@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="icons/favicon-96x96.png"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" rel="stylesheet">
     <link href="css/m3.css" rel="stylesheet" media="all">
     <script>
         if (window.location.search.indexOf('?print') === 0)
@@ -27,8 +27,8 @@
         <div class="nav-inner">
             <span class="brand">{{ d.name }}</span>
             <div class="nav-links">
-                <a :href="d.contact.linkedin" target="_blank"><i class="fa fa-linkedin-square"></i>LinkedIn</a>
-                <a :href="d.pdf + '?v=7'" target="_blank"><i class="fa fa-download"></i>Download as PDF</a>
+                <a :href="d.contact.linkedin" target="_blank"><i class="ph ph-linkedin-logo"></i>LinkedIn</a>
+                <a :href="d.pdf + '?v=7'" target="_blank"><i class="ph ph-download-simple"></i>Download as PDF</a>
             </div>
         </div>
     </nav>
@@ -49,17 +49,17 @@
             <div class="contact-col">
                 <h3>{{ d.title }}</h3>
                 <h4>{{ d.tagline }}</h4>
-                <p><i class="fa fa-home"></i>{{ d.contact.location }}</p>
-                <p><i class="fa fa-envelope"></i><a :href="'mailto:' + d.contact.email">{{ d.contact.email }}</a></p>
-                <p><i class="fa fa-phone"></i><a :href="'tel:' + d.contact.phone_uri">{{ d.contact.phone }}</a></p>
-                <p><i class="fa fa-github"></i><a :href="d.contact.github">{{ d.contact.github }}</a></p>
-                <p class="print-only"><i class="fa fa-anchor"></i><a :href="d.contact.website" target="_blank">{{ d.contact.website }}</a></p>
-                <p class="print-only"><i class="fa fa-linkedin"></i><a :href="d.contact.linkedin" target="_blank">{{ d.contact.linkedin }}</a></p>
+                <p><i class="ph ph-house"></i>{{ d.contact.location }}</p>
+                <p><i class="ph ph-envelope"></i><a :href="'mailto:' + d.contact.email">{{ d.contact.email }}</a></p>
+                <p><i class="ph ph-phone"></i><a :href="'tel:' + d.contact.phone_uri">{{ d.contact.phone }}</a></p>
+                <p><i class="ph ph-github-logo"></i><a :href="d.contact.github">{{ d.contact.github }}</a></p>
+                <p class="print-only"><i class="ph ph-anchor"></i><a :href="d.contact.website" target="_blank">{{ d.contact.website }}</a></p>
+                <p class="print-only"><i class="ph ph-linkedin-logo"></i><a :href="d.contact.linkedin" target="_blank">{{ d.contact.linkedin }}</a></p>
             </div>
         </div>
 
         <!-- SUMMARY -->
-        <h2 class="section-title"><i class="fa fa-eye"></i>Summary</h2>
+        <h2 class="section-title"><i class="ph ph-eye"></i>Summary</h2>
         <hr>
         <div class="summary">
             <p v-for="p in d.summary" v-html="renderSummary(p)"></p>
@@ -67,7 +67,7 @@
         <hr>
 
         <!-- SKILLS -->
-        <h2 class="section-title"><i class="fa fa-keyboard-o"></i>Skills &amp; Expertise</h2>
+        <h2 class="section-title"><i class="ph ph-keyboard"></i>Skills &amp; Expertise</h2>
         <hr>
         <div class="skills">
             <template v-for="tier in d.skills">
@@ -79,7 +79,7 @@
         <div class="pagebreak"></div>
 
         <!-- WORK EXPERIENCE -->
-        <h2 class="section-title"><i class="fa fa-file-text"></i>Work Experience</h2>
+        <h2 class="section-title"><i class="ph ph-file-text"></i>Work Experience</h2>
         <hr>
 
         <template v-for="(job, i) in d.experience">
@@ -116,7 +116,7 @@
                             </li>
                         </ul>
                         <div class="env" v-if="proj.env">
-                            <h5><i class="fa fa-cogs"></i> Environment</h5>
+                            <h5><i class="ph ph-gear-six"></i> Environment</h5>
                             <dl>
                                 <template v-if="proj.env.tools"><dt>Tools</dt><dd>{{ proj.env.tools }}</dd></template>
                                 <template v-if="proj.env.techs"><dt>Techs</dt><dd>{{ proj.env.techs }}</dd></template>
@@ -133,7 +133,7 @@
         <div class="pagebreak"></div>
 
         <!-- HONORS & AWARDS -->
-        <h2 class="section-title"><i class="fa fa-star"></i>Honors &amp; Awards</h2>
+        <h2 class="section-title"><i class="ph ph-star"></i>Honors &amp; Awards</h2>
         <hr>
         <template v-for="cert in d.certifications">
             <div class="award">
@@ -151,7 +151,7 @@
 
         <!-- EDUCATION -->
         <div class="education">
-            <h2 class="section-title"><i class="fa fa-bookmark"></i>Education</h2>
+            <h2 class="section-title"><i class="ph ph-bookmark"></i>Education</h2>
             <hr>
             <template v-for="ed in d.education">
                 <div class="education-entry">
@@ -167,7 +167,7 @@
         </div>
 
         <!-- LANGUAGE SKILLS -->
-        <h2 class="section-title"><i class="fa fa-comment"></i>Language Skills</h2>
+        <h2 class="section-title"><i class="ph ph-chat-circle"></i>Language Skills</h2>
         <hr>
         <div class="languages">
             <div class="lang-row" v-for="lang in d.languages">

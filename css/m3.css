@@ -101,7 +101,7 @@ nav .nav-links a:hover { color: #fff; text-decoration: none; }
     margin: 4px 0;
     font-size: 13px;
 }
-.contact-col .fa { margin-right: 10px; color: var(--color-gray); }
+.contact-col .ph { margin-right: 10px; color: var(--color-gray); }
 
 /* --- SECTION HEADINGS --- */
 .section-title {
@@ -111,7 +111,7 @@ nav .nav-links a:hover { color: #fff; text-decoration: none; }
     text-transform: uppercase;
     margin: 18px 0 4px;
 }
-.section-title .fa { margin-right: 8px; }
+.section-title .ph { margin-right: 8px; }
 hr {
     border: none;
     border-top: 1px solid var(--color-border);
@@ -191,8 +191,7 @@ details summary {
 }
 details summary::-webkit-details-marker { display: none; }
 details summary::before {
-    content: '\f105';
-    font-family: FontAwesome;
+    content: '\25B8';
     margin-right: 10px;
     transition: transform 0.2s;
     display: inline-block;

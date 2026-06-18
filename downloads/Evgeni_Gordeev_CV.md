@@ -46,6 +46,7 @@ Row Crop is a Farm Management System to track various crops throughout different
 
 **Open Source Contribution**
 
+- [Drain singletons gracefully with "rollout restart"](https://github.com/kubernetes-sigs/karpenter/pull/3013)
 - [keycloak](https://github.com/keycloak/keycloak/issues?q=is%3Aissue+author%3AEvgeniGordeev+)
 - [oauth2-proxy](https://github.com/oauth2-proxy/oauth2-proxy/pulls?q=is%3Apr+author%3AEvgeniGordeev)
 - [cytopia/docker-bind](https://github.com/cytopia/docker-bind/issues/20)

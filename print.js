@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
 
 (async () => {
     "use strict";
-    const browser = await puppeteer.launch(),
+    const browser = await puppeteer.launch({channel: 'chrome'}),
         page = await browser.newPage();
     await page.goto('http://localhost:3001?print', {waitUntil: 'networkidle2'});
     await page.addStyleTag(

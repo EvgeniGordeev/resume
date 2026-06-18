@@ -2,7 +2,7 @@
   "name": "Evgeni Gordeev",
   "title": "Principal Engineer",
   "tagline": "Java | DevOps | AWS | Kubernetes | Python",
-  "photo": "images/Evgeni_Gordeev.jpg",
+  "photo": "images/Evgeni_Gordeev_v2.jpg",
   "favicon": "icons/favicon-96x96.png",
   "pdf": "downloads/Evgeni_Gordeev_CV.pdf",
   "contact": {
@@ -122,6 +122,10 @@
           "name": "Open Source Contribution",
           "highlights_as_links": [
             {
+              "label": "Drain singletons gracefully with \"rollout restart\"",
+              "url": "https://github.com/kubernetes-sigs/karpenter/pull/3013"
+            },
+            {
               "label": "keycloak",
               "url": "https://github.com/keycloak/keycloak/issues?q=is%3Aissue+author%3AEvgeniGordeev+"
             },
@@ -203,7 +207,7 @@
         {
           "name": "Graco/Matrix",
           "description": "Graco provides products for painting, anti-corrosion, fluid transfer, gluing and sanitary applications for markets like automotive, aeronautic, body refinishing, wood, build and construction, and marine. Matrix Total Fluid Management System provides automated tracking and monitoring plus state-of-the-art dispensing for complete control of your fluid inventory.",
-          "url": "http://www.graco.com/",
+          "url": "https://www.graco.com/",
           "url_label": "Graco",
           "highlights": [
             "Refactored old code basis to adhere to modern know-hows and frameworks",

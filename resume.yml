@@ -49,10 +49,47 @@ skills:
     items: [ Intellij IDEA, Eclipse, Jira, Git, CVS, SVN ]
 
 experience:
-  - date: June 2017 - Present
-    role: Principal Engineer
-    company: Traction AG (aka Conservis before 2024 aquisition)
+  - date: January 2024 - Present
+    role: Principal Infrastructure and Site Reliability Engineer
+    company: Traction AG
     url: https://tractionag.com
+    heading: In charge of
+    duties:
+      - Architectural long-term direction for infrastructure and delivery
+      - AWS infrastructure and Kubernetes (EKS) cluster ownership
+      - Site Reliability, Observability, Monitoring, and Disaster Recovery
+      - CI/CD (GitLab) for all product lines, including acquired platforms
+      - AWS cost optimization
+      - Security posture - zero-trust VPN, endpoint protection, WAF
+      - 3rd party dependencies upgrade
+      - Open source contribution
+    projects:
+      - name: Post-acquisition Platform Consolidation
+        description: >-
+          One CI/CD, Kubernetes and AWS foundation for three product lines
+          (Conservis, Traction accounting, Granular Business) after two
+          acquisitions.
+        url: https://tractionag.com
+        url_label: Traction Ag
+        highlights:
+          - AWS cost optimization - cut the bill by 42%
+          - Unified CI/CD and Infrastructure for 3 standalone product lines
+          - Zero-trust VPN rollout (Twingate) replacing AWS OpenVPN
+          - Karpenter adoption, EKS 1.23 -> 1.31
+          - Postgres RDS -> Aurora, Redis -> Valkey, Keycloak upgrades
+          - Observability consolidation to Elastic/OpenTelemetry
+        env:
+          tools: GitLab, AWS, Kubernetes, Karpenter, Twingate, CrowdStrike, Elastic
+          techs: Spring Boot, Python, CloudFormation/Terraform, Postgres/Aurora, Keycloak
+      - name: Open Source Contribution
+        highlights_as_links:
+          - label: Karpenter
+            url: https://github.com/aws/karpenter-provider-aws/pull/9158
+
+  - date: June 2017 - December 2023
+    role: Principal Software Engineer
+    company: Conservis (acquired by Traction AG in December 2023)
+    url: https://conservis.ag
     heading: In charge of
     duties:
       - Architectural long-term direction
@@ -60,7 +97,7 @@ experience:
       - Site Reliability, Observability, Logging, Monitoring, and Disaster Recovery
       - CI/CD (GitLab/GitHub) implementation, guidelines and maintenance
       - Refactoring and Integration
-#      - QA Automation kick-off & oversight
+      - QA Automation kick-off & oversight
       - 3rd party dependencies upgrade
       - Open source contribution
     projects:

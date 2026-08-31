@@ -20,14 +20,43 @@ AWS · Kubernetes · DevOps · Java · Python · GitLab CI/CD · Site Reliabilit
 
 ## Work Experience
 
-### Principal Engineer — [Traction AG (aka Conservis before 2024 aquisition)](https://tractionag.com)
-*June 2017 - Present*
+### Principal Site Reliability and Infrastructure Engineer — [Traction AG](https://tractionag.com)
+*January 2024 - Present*
+
+- Architectural long-term direction for infrastructure and delivery
+- AWS infrastructure and Kubernetes (EKS) cluster ownership
+- Site Reliability, Observability, Monitoring, and Disaster Recovery
+- CI/CD (GitLab) for all product lines, including acquired platforms
+- AWS cost optimization
+- Security posture - zero-trust VPN, endpoint protection, WAF
+- 3rd party dependencies upgrade
+- Open source contribution
+
+**Post-acquisition Platform Consolidation**
+One CI/CD, Kubernetes and AWS foundation for three product lines (Conservis, Traction accounting, Granular Business) after two acquisitions.
+
+- AWS cost optimization - cut the bill by 63%
+- Unified CI/CD and Infrastructure for 3 standalone product lines
+- Zero-trust VPN rollout (Twingate) replacing AWS OpenVPN
+- Karpenter adoption, EKS 1.23 -> 1.31
+- Postgres RDS -> Aurora, Redis -> Valkey, Keycloak upgrades
+- Observability consolidation to Elastic/OpenTelemetry
+
+*Tools:* GitLab, AWS, Kubernetes, Karpenter, Twingate, CrowdStrike, Elastic | *Techs:* Spring Boot, Python, CloudFormation/Terraform, Postgres/Aurora, Keycloak
+
+**Open Source Contribution**
+
+- [Karpenter](https://github.com/aws/karpenter-provider-aws/pull/9158)
+
+### Principal Software Engineer — [Conservis (acquired by Traction AG in December 2023)](https://conservis.ag)
+*June 2017 - December 2023*
 
 - Architectural long-term direction
 - AWS infrastructure and Kubernetes cluster support
 - Site Reliability, Observability, Logging, Monitoring, and Disaster Recovery
 - CI/CD (GitLab/GitHub) implementation, guidelines and maintenance
 - Refactoring and Integration
+- QA Automation kick-off & oversight
 - 3rd party dependencies upgrade
 - Open source contribution
 

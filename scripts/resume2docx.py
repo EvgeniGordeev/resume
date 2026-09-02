@@ -14,7 +14,7 @@ resume.json keys used here that the website ignores:
   experience[].compact   render the role as a single line
   experience[].print     false = leave the role out of the exports entirely
 """
-import json, os, re, sys
+import json, os, posixpath, re, sys, zipfile
 
 try:
     from docx import Document
@@ -63,6 +63,103 @@ def bare(url):
 def clean(s):
     return " ".join(str(s).split())
 
+
+
+# --- slimming ----------------------------------------------------------------
+# python-docx builds every document on its bundled default.docx, a Word-for-Mac file that is
+# ~38 KB before a single word is written: Word's whole built-in style table, a duplicate
+# stylesWithEffects part, a document thumbnail and customXml plumbing. None of it is referenced
+# by what this script produces, so it is dropped after saving.
+DROP_PARTS = {"word/stylesWithEffects.xml", "docProps/thumbnail.jpeg"}
+DROP_PREFIX = "customXml/"
+
+W  = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+REL = "{http://schemas.openxmlformats.org/package/2006/relationships}"
+CT  = "{http://schemas.openxmlformats.org/package/2006/content-types}"
+
+
+def _dropped(name):
+    return name in DROP_PARTS or name.startswith(DROP_PREFIX)
+
+
+def _prune_styles(styles_xml, *referencing_parts):
+    """Keep the styles the document actually names, Word's defaults, and whatever those inherit
+    from; drop the latent-style table outright."""
+    from lxml import etree
+    root = etree.fromstring(styles_xml)
+    latent = root.find(W + "latentStyles")
+    if latent is not None:
+        root.remove(latent)
+
+    by_id = {s.get(W + "styleId"): s for s in root.findall(W + "style")}
+    wanted = {s.get(W + "styleId") for s in by_id.values() if s.get(W + "default") == "1"}
+    for part in referencing_parts:
+        ref = etree.fromstring(part)
+        for tag in ("pStyle", "rStyle", "tblStyle"):
+            wanted |= {e.get(W + "val") for e in ref.iter(W + tag)}
+
+    keep, stack = set(), [w for w in wanted if w]
+    while stack:                                   # follow basedOn / next / link
+        sid = stack.pop()
+        if sid in keep:
+            continue
+        keep.add(sid)
+        style = by_id.get(sid)
+        if style is None:
+            continue
+        for tag in ("basedOn", "next", "link"):
+            e = style.find(W + tag)
+            if e is not None and e.get(W + "val"):
+                stack.append(e.get(W + "val"))
+
+    for sid, style in by_id.items():
+        if sid not in keep:
+            root.remove(style)
+    return etree.tostring(root, xml_declaration=True, encoding="UTF-8", standalone=True)
+
+
+def _prune_rels(rels_xml, base):
+    """Drop relationships pointing at parts that are no longer in the package."""
+    from lxml import etree
+    root = etree.fromstring(rels_xml)
+    for r in list(root):
+        if r.get("TargetMode") == "External":
+            continue
+        target = posixpath.normpath(posixpath.join(base, r.get("Target", "")))
+        if _dropped(target):
+            root.remove(r)
+    return etree.tostring(root, xml_declaration=True, encoding="UTF-8", standalone=True)
+
+
+def _prune_content_types(ct_xml):
+    from lxml import etree
+    root = etree.fromstring(ct_xml)
+    for e in list(root):
+        part = (e.get("PartName") or "").lstrip("/")
+        if part and _dropped(part):
+            root.remove(e)
+        elif e.get("Extension") == "jpeg":         # the thumbnail was the only jpeg
+            root.remove(e)
+    return etree.tostring(root, xml_declaration=True, encoding="UTF-8", standalone=True)
+
+
+def slim(path):
+    """Rewrite the saved .docx without the unused template parts. Content is untouched."""
+    with zipfile.ZipFile(path) as z:
+        parts = {i.filename: z.read(i.filename) for i in z.infolist()}
+
+    parts = {n: b for n, b in parts.items() if not _dropped(n)}
+    parts["word/styles.xml"] = _prune_styles(
+        parts["word/styles.xml"], parts["word/document.xml"], parts.get("word/numbering.xml", b"<x/>"))
+    parts["[Content_Types].xml"] = _prune_content_types(parts["[Content_Types].xml"])
+    for name in [n for n in parts if n.endswith(".rels")]:
+        base = posixpath.dirname(posixpath.dirname(name))
+        parts[name] = _prune_rels(parts[name], base)
+
+    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
+        for name, blob in parts.items():           # [Content_Types].xml must come first
+            z.writestr(name, blob)
+    return path
 
 # --- docx plumbing -----------------------------------------------------------
 def new_doc():
@@ -318,7 +415,7 @@ def build(data, out):
     for k in ("title", "subject", "keywords", "comments", "category"):
         setattr(doc.core_properties, k, "")
     doc.save(out)
-    return out
+    return slim(out)
 
 
 if __name__ == "__main__":

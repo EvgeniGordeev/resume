@@ -18,7 +18,6 @@ help:
 	@echo "all        json, md, docx and pdf"
 	@echo "diff       what a hand-edited docx says that resume.yml does not"
 	@echo "print      legacy: PDF printed from the running site (needs 'make run')"
-	@echo "verify     ATS and content checks on the generated docx"
 	@echo "images     losslessly shrink $(IMG_DIR)/ in place (safe to repeat)"
 	@echo "clean      remove node_modules"
 
@@ -52,9 +51,6 @@ diff:
 print:
 	pnpm run print
 
-verify:
-	python3 ../job-hunt/.claude/skills/job-search-toolkit/scripts/verify_resume.py $(CV).docx
-
 clean:
 	pnpm run clean
 
@@ -62,23 +58,11 @@ clean:
 # and PNG is only re-compressed, so this is safe to run repeatedly. A file is replaced only when the
 # result is genuinely smaller. EXIF is dropped, except on a JPEG whose Orientation is not 1, where
 # stripping it would rotate the picture.
+# Lossless and in-place: JPEG is repacked (Huffman + progressive, pixels untouched), PNG is
+# recompressed. Safe to run repeatedly; EXIF is kept, so orientation cannot be lost.
 images:
-	@before=$$(find $(IMG_DIR) -type f -exec stat -f%z {} + | awk '{t+=$$1} END{print t+0}'); \
-	for f in $(IMG_DIR)/*.jpg $(IMG_DIR)/*.jpeg $(IMG_DIR)/*.JPG; do \
-		[ -e "$$f" ] || continue; \
-		o=$$(magick identify -format '%[EXIF:Orientation]' "$$f" 2>/dev/null); \
-		case "$$o" in ''|1) keep=none ;; *) keep=all ;; esac; \
-		jpegtran -optimize -progressive -copy $$keep -outfile "$$f.tmp" "$$f" 2>/dev/null || continue; \
-		if [ -s "$$f.tmp" ] && [ $$(stat -f%z "$$f.tmp") -lt $$(stat -f%z "$$f") ]; then \
-			mv "$$f.tmp" "$$f"; echo "  jpeg  $$f"; \
-		else rm -f "$$f.tmp"; fi; \
-	done; \
-	for f in $(IMG_DIR)/*.png; do \
-		[ -e "$$f" ] || continue; \
-		magick "$$f" -strip -define png:compression-level=9 -define png:compression-filter=5 "$$f.tmp" 2>/dev/null || continue; \
-		if [ -s "$$f.tmp" ] && [ $$(stat -f%z "$$f.tmp") -lt $$(stat -f%z "$$f") ]; then \
-			mv "$$f.tmp" "$$f"; echo "  png   $$f"; \
-		else rm -f "$$f.tmp"; fi; \
-	done; \
-	after=$$(find $(IMG_DIR) -type f -exec stat -f%z {} + | awk '{t+=$$1} END{print t+0}'); \
-	awk -v b=$$before -v a=$$after 'BEGIN{printf "$(IMG_DIR): %.0f KB -> %.0f KB (%.1f%% smaller)\n", b/1024, a/1024, b?100-100*a/b:0}'
+	@for f in $(IMG_DIR)/*.jpg $(IMG_DIR)/*.jpeg; do [ -e "$$f" ] || continue; \
+		jpegtran -optimize -progressive -copy all "$$f" > "$$f.t" && mv "$$f.t" "$$f"; done
+	@for f in $(IMG_DIR)/*.png; do [ -e "$$f" ] || continue; \
+		magick "$$f" -strip -define png:compression-level=9 "$$f"; done
+	@du -sh $(IMG_DIR)

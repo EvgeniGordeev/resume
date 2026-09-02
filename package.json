@@ -18,9 +18,12 @@
   "scripts": {
     "clean": "rimraf node_modules/",
     "start": "DEBUG=* serve ./ -l 3001",
-    "print": "node print.js",
+    "print": "node scripts/print.js",
     "yaml2json": "yq -o=json resume.yml > resume.json",
-    "yaml2md": "pnpm run yaml2json && node resume2md.js"
+    "yaml2md": "pnpm run yaml2json && node scripts/resume2md.js",
+    "yaml2doc": "pnpm run yaml2json && python3 scripts/resume2docx.py",
+    "yaml2pdf": "pnpm run yaml2doc && soffice --headless --convert-to pdf --outdir downloads downloads/Evgeni_Gordeev_CV.docx",
+    "docx-diff": "pnpm run yaml2json && python3 scripts/docx-diff.py"
   },
   "packageManager": "pnpm@10.2.1"
 }

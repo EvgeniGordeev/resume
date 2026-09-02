@@ -11,6 +11,8 @@ nav { display: none; }
 .container { padding: 10px 0; box-shadow: none; }
 
 .web-only { display: none !important; }
+/* the photo is web-only, so the header is a single column when printing */
+.header-content { grid-template-columns: 1fr; gap: 0; }
 .print-only { display: block !important; }
 p.print-only { display: block !important; }
 

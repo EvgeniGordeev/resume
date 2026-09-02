@@ -75,3 +75,8 @@ web/bower_components
 *.local*.json
 *.version
 print.pdf
+
+# Office lock files
+~$*
+
+__pycache__/

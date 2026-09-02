@@ -28,7 +28,8 @@
             <span class="brand">{{ d.name }}</span>
             <div class="nav-links">
                 <a :href="d.contact.linkedin" target="_blank"><i class="ph ph-linkedin-logo"></i>LinkedIn</a>
-                <a :href="d.pdf + '?v=7'" target="_blank"><i class="ph ph-download-simple"></i>Download as PDF</a>
+                <a :href="d.pdf + '?v=7'" target="_blank"><i class="ph ph-download-simple"></i>PDF</a>
+                <a :href="d.docx + '?v=7'" target="_blank"><i class="ph ph-download-simple"></i>DOC</a>
             </div>
         </div>
     </nav>
@@ -42,9 +43,6 @@
         <div class="header-content">
             <div class="photo-col web-only">
                 <img :alt="d.name" :src="d.photo">
-            </div>
-            <div class="photo-col print-only">
-                <img class="photo" :alt="d.name" :src="d.photo">
             </div>
             <div class="contact-col">
                 <h3>{{ d.title }}</h3>
@@ -91,7 +89,6 @@
                         Company: <a v-if="job.url" :href="job.url">{{ job.company }}</a>
                         <template v-else>{{ job.company }}</template>
                     </div>
-                    <h4>{{ job.heading }}</h4>
                     <ul>
                         <li v-for="duty in job.duties">{{ duty }}</li>
                     </ul>

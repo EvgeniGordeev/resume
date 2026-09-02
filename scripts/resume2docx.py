@@ -36,6 +36,7 @@ ACCENT_HEX = "0F4C66"
 RULE_HEX  = "D9981E"             # gold rule under the contact block
 LINK      = (0x1F, 0x5C, 0x99)
 SEP       = "   |   "
+CONTACT_SEP = "  |  "           # tighter, so the whole contact block fits on one line
 
 MONTHS = {m: i for i, m in enumerate(
     ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
@@ -134,13 +135,14 @@ def _border(p, color, sz, edge="bottom", space=4):
     bd.append(e)
 
 
-def hyperlink(p, url, text, size=10.5, color=LINK):
+def hyperlink(p, url, text, size=10.5, color=LINK, bold=False):
     """A real hyperlink run: still selectable text, so parsers read the label."""
     r_id = p.part.relate_to(url, RT.HYPERLINK, is_external=True)
     hl = OxmlElement('w:hyperlink'); hl.set(qn('r:id'), r_id)
     run = OxmlElement('w:r'); rpr = OxmlElement('w:rPr')
     sz = OxmlElement('w:sz'); sz.set(qn('w:val'), str(int(size * 2))); rpr.append(sz)
     col = OxmlElement('w:color'); col.set(qn('w:val'), '%02X%02X%02X' % color); rpr.append(col)
+    if bold: rpr.append(OxmlElement('w:b'))
     run.append(rpr)
     t = OxmlElement('w:t'); t.text = text; t.set(qn('xml:space'), 'preserve'); run.append(t)
     hl.append(run); p._p.append(hl)
@@ -171,7 +173,7 @@ def TITLE_LINE(doc, text):
 def CONTACT(doc, parts, rule=False):
     p = _p(doc, after=9 if rule else 1)
     for i, (label, url) in enumerate(parts):
-        if i: _run(p, SEP, 9.5, color=GRAY)
+        if i: _run(p, CONTACT_SEP, 9.5, color=GRAY)
         if url: hyperlink(p, url, label, size=9.5)
         else:   _run(p, label, 9.5, color=GRAY)
     if rule: _border(p, RULE_HEX, 12, space=5)
@@ -197,9 +199,10 @@ def LABELED(doc, label, body, size=10.5):
     return p
 
 
-def EMPLOYER(doc, company, before=9):
+def EMPLOYER(doc, company, url=None, before=9):
     p = _p(doc, after=0, before=before)
-    _run(p, company, 12, bold=True, color=INK)
+    if url: hyperlink(p, url, company, size=12, color=INK, bold=True)
+    else:   _run(p, company, 12, bold=True, color=INK)
     return p
 
 
@@ -239,9 +242,9 @@ def build(data, out):
     phone_uri = c.get("phone_print_uri") or c.get("phone_uri")
     CONTACT(doc, [(c["location"], None),
                   (phone, f"tel:{phone_uri}"),
-                  (c["email"], f"mailto:{c['email']}")])
-    profiles = [(bare(c[k]), c[k]) for k in ("linkedin", "github") if c.get(k)]
-    CONTACT(doc, profiles, rule=True)
+                  (c["email"], f"mailto:{c['email']}")]
+                 + [(bare(c[k]), c[k]) for k in ("linkedin", "github") if c.get(k)],
+            rule=True)
 
     SECTION(doc, "Professional Summary")
     for para in data.get("summary", []):
@@ -256,11 +259,13 @@ def build(data, out):
         if job.get("compact"):
             p = _p(doc, after=3, before=4)
             _run(p, job["role"] + ", ", 10.5, bold=True, color=INK)
-            _run(p, job["company"] + SEP + mm_yyyy(job["date"]), 10.5, color=GRAY)
+            if job.get("url"): hyperlink(p, job["url"], job["company"], size=10.5, color=GRAY)
+            else:              _run(p, job["company"], 10.5, color=GRAY)
+            _run(p, SEP + mm_yyyy(job["date"]), 10.5, color=GRAY)
             duties = "; ".join(clean(d).rstrip('.') for d in job.get("duties", []))
             if duties: _run(p, ". " + duties, 10.5)
             continue
-        EMPLOYER(doc, job["company"])
+        EMPLOYER(doc, job["company"], job.get("url"))
         ROLE(doc, job["role"], mm_yyyy(job["date"]))
         if job.get("duties"):
             # job["heading"] ("In charge of", "Responsibilities") is a website label, not printed here
@@ -298,8 +303,9 @@ def build(data, out):
         SECTION(doc, "Certifications")
         for cert in data["certifications"]:
             p = _p(doc, after=2)
+            # certification names are not bold: the section heading already frames them
             if cert.get("url"): hyperlink(p, cert["url"], cert["name"], size=10.5, color=INK)
-            else:               _run(p, cert["name"], 10.5, bold=True, color=INK)
+            else:               _run(p, cert["name"], 10.5, color=INK)
             _run(p, SEP + cert["issuer"] + SEP + mm_yyyy(cert["date"]), 10.5, color=GRAY)
 
     if data.get("languages"):

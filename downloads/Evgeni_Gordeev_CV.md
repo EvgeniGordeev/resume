@@ -2,7 +2,7 @@
 
 **Principal Engineer** · Java · DevOps · AWS · Kubernetes · Python
 
-Twin Cities, MN | [(612) 352-0233](tel:+16123520233) | [evgeni.gordeev@gmail.com](mailto:evgeni.gordeev@gmail.com)\
+Minneapolis, MN | [(612) 352-0233](tel:+16123520233) | [evgeni.gordeev@gmail.com](mailto:evgeni.gordeev@gmail.com)\
 [linkedin.com/in/egordeev](https://www.linkedin.com/in/egordeev) | [github.com/EvgeniGordeev](https://github.com/EvgeniGordeev)
 
 ## Professional Summary
@@ -101,11 +101,23 @@ Responsibilities: Design, development and legacy maintenance for finance, energy
 - Built a configurable web-form engine, an HTML5 responsive UI and cached table navigation for a finance and accounting outsourcing platform; forked Hibernate Audit with custom fixes
 - Delivered energy monitoring (Intercap), account management (Datalogics) and vehicle telematics (PeopleNet) applications on Spring, Hibernate and GWT
 
-**Senior Java Developer**, Information Technology Alliance (ITA) | 08/2010 - 05/2011. GWT user interface for a Standard Bank of South Africa CRM application; led up to 3 developers
+### Information Technology Alliance (ITA)
 
-**Java Developer**, Navagate Inc. | 01/2008 - 07/2010. Agility 3.1 to 4.0, a CRM server for the insurance business, including the JDBC-to-Hibernate and JSF transitions, customization and integration; mentored a team of 3
+**Senior Java Developer** | 08/2010 - 05/2011
 
-**QA Engineer**, Navagate Inc. | 06/2007 - 12/2007. Smoke, functional and regression testing and test case design for Agility CRM customizations (NY Life)
+Responsibilities: GWT user interface for a Standard Bank of South Africa CRM application; led up to 3 developers.
+
+### Navagate Inc.
+
+**Java Developer** | 01/2008 - 07/2010
+
+Responsibilities: Agility 3.1 to 4.0, a CRM server for the insurance business, including the JDBC-to-Hibernate and JSF transitions, customization and integration; mentored a team of 3.
+
+### Navagate Inc.
+
+**QA Engineer** | 06/2007 - 12/2007
+
+Responsibilities: Smoke, functional and regression testing and test case design for Agility CRM customizations (NY Life).
 
 ## Education
 

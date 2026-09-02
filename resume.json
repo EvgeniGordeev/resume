@@ -7,7 +7,7 @@
   "pdf": "downloads/Evgeni_Gordeev_CV.pdf",
   "docx": "downloads/Evgeni_Gordeev_CV.docx",
   "contact": {
-    "location": "Twin Cities, MN",
+    "location": "Minneapolis, MN",
     "email": "evgeni.gordeev@gmail.com",
     "phone": "(612) 460-0747",
     "phone_uri": "+16124600747",
@@ -260,7 +260,6 @@
       "date": "August 2010 - May 2011",
       "role": "Senior Java Developer",
       "company": "Information Technology Alliance (ITA)",
-      "compact": true,
       "heading": "Responsibilities",
       "duties": [
         "GWT user interface for a Standard Bank of South Africa CRM application; led up to 3 developers"
@@ -270,7 +269,6 @@
       "date": "Jan 2008 - July 2010",
       "role": "Java Developer",
       "company": "Navagate Inc.",
-      "compact": true,
       "heading": "Responsibilities",
       "duties": [
         "Agility 3.1 to 4.0, a CRM server for the insurance business, including the JDBC-to-Hibernate and JSF transitions, customization and integration; mentored a team of 3"
@@ -280,7 +278,6 @@
       "date": "June 2007 - Dec 2007",
       "role": "QA Engineer",
       "company": "Navagate Inc.",
-      "compact": true,
       "heading": "Responsibilities",
       "duties": [
         "Smoke, functional and regression testing and test case design for Agility CRM customizations (NY Life)"

@@ -73,7 +73,7 @@ experience:
           - Built a Claude Code skill that maps every environment and cluster (logs, Elasticsearch, Datadog, EKS events) so any Engineer can triage production
         env:
           tools: GitLab, AWS, EKS, Karpenter, Twingate, CrowdStrike, Elastic
-          techs: Spring Boot, Python, CloudFormation/Terraform, Aurora, Valkey, Keycloak
+          techs: Spring Boot, NodeJS, Python, CloudFormation/Terraform, Aurora, Valkey, Keycloak
       - name: Open source
         highlights_as_links:
           - label: Karpenter drain flow for singleton pods (proposed upstream)
@@ -110,7 +110,7 @@ experience:
           - Brought the release cadence from 4 to 6 weeks down to 2; the next dependency upgrade produced zero QA tickets, down from 60
       - name: Identity, SSO and Partner API
         highlights:
-          - Proposed Keycloak SSO with a 2019 proof of concept, led the build at about 0.5 FTE plus a part-time developer, and migrated 15 web apps (2022) and 6 mobile apps (2023) with login-time user migration; no downtime
+          - Proposed Keycloak SSO with a 2019 proof of concept, led the build at 25% of my time with a developer at 50%, and migrated 12 web apps (2022) and 6 mobile apps (2023) with login-time user migration; no downtime; upgraded Keycloak yearly since 2022
           - Delivered a stateless partner API on AWS API Gateway that resolves API keys to SSO users and roles via token-exchange grant type, with tokens and routing managed internally
           - Designed multi-grower login so support staff no longer re-authenticates per customer
       - name: Open source

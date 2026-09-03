@@ -43,7 +43,7 @@ In charge of: Conservis / Granular farm management and Traction accounting: AWS 
 - Replaced AWS Client VPN with Twingate, cutting VPN cost 55%
 - Built a Claude Code skill that maps every environment and cluster (logs, Elasticsearch, Datadog, EKS events) so any Engineer can triage production
 
-*Tools:* GitLab, AWS, EKS, Karpenter, Twingate, CrowdStrike, Elastic | *Tech:* Spring Boot, Python, CloudFormation/Terraform, Aurora, Valkey, Keycloak
+*Tools:* GitLab, AWS, EKS, Karpenter, Twingate, CrowdStrike, Elastic | *Tech:* Spring Boot, NodeJS, Python, CloudFormation/Terraform, Aurora, Valkey, Keycloak
 
 **Open source:** [Karpenter drain flow for singleton pods (proposed upstream)](https://github.com/aws/karpenter-provider-aws/pull/9158), [Karpenter drain strategy (proposed upstream)](https://github.com/kubernetes-sigs/karpenter/pull/3013)
 
@@ -72,7 +72,7 @@ In charge of: Tech Lead for the Java farm-management platform (row crops, perman
 
 #### Identity, SSO and Partner API
 
-- Proposed Keycloak SSO with a 2019 proof of concept, led the build at about 0.5 FTE plus a part-time developer, and migrated 15 web apps (2022) and 6 mobile apps (2023) with login-time user migration; no downtime
+- Proposed Keycloak SSO with a 2019 proof of concept, led the build at 25% of my time with a developer at 50%, and migrated 12 web apps (2022) and 6 mobile apps (2023) with login-time user migration; no downtime; upgraded Keycloak yearly since 2022
 - Delivered a stateless partner API on AWS API Gateway that resolves API keys to SSO users and roles via token-exchange grant type, with tokens and routing managed internally
 - Designed multi-grower login so support staff no longer re-authenticates per customer
 

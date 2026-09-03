@@ -18,6 +18,10 @@ p.print-only { display: block !important; }
 
 details { border: none; }
 details[open] summary { background: transparent; }
+/* the print view is static: every panel is already open, so the summaries must not react to
+   the mouse at all. without this a click toggles the details shut and the
+   `details:not([open])` rule below then removes the whole section from the page. */
+details summary { pointer-events: none; cursor: default; }
 details .panel-body { padding: 4px 0 4px 14px; }
 details:not([open]) { display: none; }
 

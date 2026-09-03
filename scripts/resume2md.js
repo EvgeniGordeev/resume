@@ -41,10 +41,15 @@ ln(`**${data.title}**${tagline ? ' · ' + tagline : ''}`);
 ln();
 const phone = c.phone_print || c.phone;
 const phoneUri = c.phone_print_uri || c.phone_uri;
-// two deliberate lines (a hard break, so it stays one styled paragraph in the docx):
-// location | phone | email, then the profiles. The website is left out: it is the resume itself.
-ln([c.location, link(phone, `tel:${phoneUri}`), link(c.email, `mailto:${c.email}`)].join(SEP) + '\\');
-ln([c.linkedin && link(bare(c.linkedin), c.linkedin), c.github && link(bare(c.github), c.github)].filter(Boolean).join(SEP));
+// one line: location | phone | email | linkedin | github.
+// The website is left out: it is the resume itself.
+ln([
+    c.location,
+    link(phone, `tel:${phoneUri}`),
+    link(c.email, `mailto:${c.email}`),
+    c.linkedin && link(bare(c.linkedin), c.linkedin),
+    c.github && link(bare(c.github), c.github),
+].filter(Boolean).join(SEP));
 ln();
 
 // Summary

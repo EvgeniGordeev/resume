@@ -2,8 +2,7 @@
 
 **Principal Engineer** · Java · DevOps · AWS · Kubernetes · Python
 
-Minneapolis, MN | [(612) 352-0233](tel:+16123520233) | [evgeni.gordeev@gmail.com](mailto:evgeni.gordeev@gmail.com)\
-[linkedin.com/in/egordeev](https://www.linkedin.com/in/egordeev) | [github.com/EvgeniGordeev](https://github.com/EvgeniGordeev)
+Minneapolis, MN | [(612) 352-0233](tel:+16123520233) | [evgeni.gordeev@gmail.com](mailto:evgeni.gordeev@gmail.com) | [linkedin.com/in/egordeev](https://www.linkedin.com/in/egordeev) | [github.com/EvgeniGordeev](https://github.com/EvgeniGordeev)
 
 ## Professional Summary
 

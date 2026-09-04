@@ -18,7 +18,7 @@
     "website": "https://evgenigordeev.github.io/resume/"
   },
   "summary": [
-    "Principal Engineer, 18 years' experience. Progressed from Senior Java Developer to sole technical owner of AWS and Kubernetes infrastructure and reliability across three product lines.",
+    "Principal Engineer, 18 years' experience. Progressed from Senior Java Developer to sole technical owner of AWS and Kubernetes infrastructure and reliability across three product lines on 8 EKS clusters.",
     "Cut AWS spend by 42% (~$275K/year) with no incidents. Took legacy monolith upgrade cycles from 6 months to 6 weeks to 2 weeks. Created an automation framework that reduced post-upgrade defects from 60 to zero and enabled QA Engineers to write tests in plain English. Ran every migration alongside the live system until DNS cutover, completing nine years of upgrades with zero downtime.",
     "Drives projects from conception through production, with a focus on automation, reliability, optimization, and continuous improvement."
   ],
@@ -28,10 +28,10 @@
       "label": "Core",
       "items": [
         "AWS",
-        "Kubernetes (EKS)",
-        "GitLab",
-        "GitHub",
-        "Java / Spring Boot",
+        "Kubernetes",
+        "DevOps",
+        "GitOps",
+        "Java",
         "Python"
       ]
     },
@@ -43,7 +43,10 @@
         "Helm",
         "Docker",
         "CloudFormation / Terraform",
-        "Elasticsearch / Kibana APM",
+        "Elastic / Kibana APM",
+        "Prometheus",
+        "Grafana",
+        "GCP Cloud Monitoring",
         "Sentry",
         "Keycloak (OIDC / SSO)",
         "AWS API Gateway",
@@ -56,6 +59,7 @@
       "tier": "success",
       "label": "Backend & Data",
       "items": [
+        "Spring Boot",
         "Hibernate",
         "Maven",
         "Gradle",
@@ -111,12 +115,12 @@
           "url_label": "Traction Ag",
           "highlights": [
             "Cut the AWS bill 42% (about $275K per year) across three product lines with rightsizing, Karpenter in every environment and spot instances for lower environments and production workers; no incidents",
-            "Consolidated three product lines onto one GitLab CI/CD and EKS foundation; 3 EKS upgrades since with zero downtime, 2 to 3 per year",
+            "Consolidated three product lines (75 production deployments across 4 production clusters, plus 4 non-production) onto one GitLab CI/CD and EKS foundation; 3 EKS upgrades since with zero downtime, 2 to 3 per year",
             "Took over Granular Infrastructure, an IP acquisition with no staff, on Jenkins and EKS 1.23; upgraded it to 1.31 and onto the shared pipelines without a handover",
             "Migrated Traction business from Bitbucket and ECS (manual production deploys) to GitLab and EKS, with Redis to Valkey and RDS 16 to Aurora 17, via parallel environments and a DNS switch; no downtime",
             "Added Elasticsearch APM and logs collection to about 15 Traction business services in 2 weeks",
             "Replaced AWS Client VPN with Twingate, cutting VPN cost 55%",
-            "Built a Claude Code skill that maps every environment and cluster (logs, Elasticsearch, Datadog, EKS events) so any Engineer can triage production"
+            "Built a Claude Code skill that maps every environment and cluster (logs, Elastic, Prometheus, Datadog, EKS events) so any Engineer can triage production"
           ],
           "env": {
             "tools": "GitLab, AWS, EKS, Karpenter, Twingate, CrowdStrike, Elastic",

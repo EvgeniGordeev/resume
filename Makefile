@@ -42,7 +42,7 @@ docx:
 pdf:
 	pnpm run yaml2pdf
 
-all: md pdf
+all-docs: json md docx pdf
 
 # Run before regenerating: 'make docx' overwrites the file you edited in Word.
 diff:

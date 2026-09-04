@@ -6,7 +6,7 @@ Minneapolis, MN | [(612) 352-0233](tel:+16123520233) | [evgeni.gordeev@gmail.com
 
 ## Professional Summary
 
-Principal Engineer, 18 years' experience. Progressed from Senior Java Developer to sole technical owner of AWS and Kubernetes infrastructure and reliability across three product lines.
+Principal Engineer, 18 years' experience. Progressed from Senior Java Developer to sole technical owner of AWS and Kubernetes infrastructure and reliability across three product lines on 8 EKS clusters.
 
 Cut AWS spend by 42% (~$275K/year) with no incidents. Took legacy monolith upgrade cycles from 6 months to 6 weeks to 2 weeks. Created an automation framework that reduced post-upgrade defects from 60 to zero and enabled QA Engineers to write tests in plain English. Ran every migration alongside the live system until DNS cutover, completing nine years of upgrades with zero downtime.
 
@@ -14,11 +14,11 @@ Drives projects from conception through production, with a focus on automation, 
 
 ## Technical Skills
 
-**Core:** AWS, Kubernetes (EKS), GitLab, GitHub, Java / Spring Boot, Python
+**Core:** AWS, Kubernetes, DevOps, GitOps, Java, Python
 
-**Platform & Reliability:** Karpenter, Helm, Docker, CloudFormation / Terraform, Elasticsearch / Kibana APM, Sentry, Keycloak (OIDC / SSO), AWS API Gateway, AWS WAF, Twingate, SonarQube
+**Platform & Reliability:** Karpenter, Helm, Docker, CloudFormation / Terraform, Elastic / Kibana APM, Prometheus, Grafana, GCP Cloud Monitoring, Sentry, Keycloak (OIDC / SSO), AWS API Gateway, AWS WAF, Twingate, SonarQube
 
-**Backend & Data:** Hibernate, Maven, Gradle, REST, MySQL, Postgres / Aurora, Redis / Valkey, RabbitMQ, Oracle DB, Tomcat, JBoss / WildFly, Jetty
+**Backend & Data:** Spring Boot, Hibernate, Maven, Gradle, REST, MySQL, Postgres / Aurora, Redis / Valkey, RabbitMQ, Oracle DB, Tomcat, JBoss / WildFly, Jetty
 
 **Frontend:** JavaScript, ReactJS, AngularJS, NodeJS, HTML5 / CSS3, Bootstrap
 
@@ -35,12 +35,12 @@ In charge of: Conservis / Granular farm management and Traction accounting: AWS 
 #### [Post-acquisition Platform Consolidation](https://tractionag.com)
 
 - Cut the AWS bill 42% (about $275K per year) across three product lines with rightsizing, Karpenter in every environment and spot instances for lower environments and production workers; no incidents
-- Consolidated three product lines onto one GitLab CI/CD and EKS foundation; 3 EKS upgrades since with zero downtime, 2 to 3 per year
+- Consolidated three product lines (75 production deployments across 4 production clusters, plus 4 non-production) onto one GitLab CI/CD and EKS foundation; 3 EKS upgrades since with zero downtime, 2 to 3 per year
 - Took over Granular Infrastructure, an IP acquisition with no staff, on Jenkins and EKS 1.23; upgraded it to 1.31 and onto the shared pipelines without a handover
 - Migrated Traction business from Bitbucket and ECS (manual production deploys) to GitLab and EKS, with Redis to Valkey and RDS 16 to Aurora 17, via parallel environments and a DNS switch; no downtime
 - Added Elasticsearch APM and logs collection to about 15 Traction business services in 2 weeks
 - Replaced AWS Client VPN with Twingate, cutting VPN cost 55%
-- Built a Claude Code skill that maps every environment and cluster (logs, Elasticsearch, Datadog, EKS events) so any Engineer can triage production
+- Built a Claude Code skill that maps every environment and cluster (logs, Elastic, Prometheus, Datadog, EKS events) so any Engineer can triage production
 
 *Tools:* GitLab, AWS, EKS, Karpenter, Twingate, CrowdStrike, Elastic | *Tech:* Spring Boot, NodeJS, Python, CloudFormation/Terraform, Aurora, Valkey, Keycloak
 

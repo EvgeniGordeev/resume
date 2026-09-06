@@ -40,10 +40,10 @@ skills:
     items: [ AWS, Kubernetes, DevOps, GitOps, Java, Python ]
   - tier: info
     label: Platform & Reliability
-    items: [ Karpenter, Helm, Docker, CloudFormation / Terraform, Elastic / Kibana APM, Prometheus, Grafana, GCP Cloud Monitoring, Sentry, Keycloak (OIDC / SSO), API Gateway, WAF ]
+    items: [ Karpenter, Helm, Docker, CloudFormation / Terraform, Elastic / Kibana APM, OpenTelemetry, Prometheus, Grafana, GCP Cloud Monitoring, Sentry, Keycloak (OIDC / SSO), API Gateway, WAF ]
   - tier: success
     label: Backend & Data
-    items: [ Spring Boot, Hibernate, Maven, Gradle, REST, MySQL, Postgres / Aurora, Redis / Valkey, RabbitMQ, Oracle DB, Tomcat, JBoss / WildFly, Jetty ]
+    items: [ Spring Boot, Hibernate, Postgres / Aurora, Redis / Valkey, RabbitMQ, MySQL, Maven, Gradle, REST, Oracle DB, Tomcat, JBoss / WildFly, Jetty ]
   - tier: warning
     label: Frontend
     items: [ JavaScript, ReactJS, AngularJS, NodeJS, HTML5 / CSS3, Bootstrap ]

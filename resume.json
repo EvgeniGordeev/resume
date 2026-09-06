@@ -44,15 +44,14 @@
         "Docker",
         "CloudFormation / Terraform",
         "Elastic / Kibana APM",
+        "OpenTelemetry",
         "Prometheus",
         "Grafana",
         "GCP Cloud Monitoring",
         "Sentry",
         "Keycloak (OIDC / SSO)",
-        "AWS API Gateway",
-        "AWS WAF",
-        "Twingate",
-        "SonarQube"
+        "API Gateway",
+        "WAF"
       ]
     },
     {
@@ -61,13 +60,13 @@
       "items": [
         "Spring Boot",
         "Hibernate",
-        "Maven",
-        "Gradle",
-        "REST",
-        "MySQL",
         "Postgres / Aurora",
         "Redis / Valkey",
         "RabbitMQ",
+        "MySQL",
+        "Maven",
+        "Gradle",
+        "REST",
         "Oracle DB",
         "Tomcat",
         "JBoss / WildFly",
@@ -94,7 +93,9 @@
         "Claude",
         "IntelliJ",
         "Jira",
-        "Git"
+        "Git",
+        "Twingate",
+        "SonarQube"
       ]
     }
   ],

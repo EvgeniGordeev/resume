@@ -16,13 +16,13 @@ Drives projects from conception through production, with a focus on automation, 
 
 **Core:** AWS, Kubernetes, DevOps, GitOps, Java, Python
 
-**Platform & Reliability:** Karpenter, Helm, Docker, CloudFormation / Terraform, Elastic / Kibana APM, Prometheus, Grafana, GCP Cloud Monitoring, Sentry, Keycloak (OIDC / SSO), AWS API Gateway, AWS WAF, Twingate, SonarQube
+**Platform & Reliability:** Karpenter, Helm, Docker, CloudFormation / Terraform, Elastic / Kibana APM, OpenTelemetry, Prometheus, Grafana, GCP Cloud Monitoring, Sentry, Keycloak (OIDC / SSO), API Gateway, WAF
 
-**Backend & Data:** Spring Boot, Hibernate, Maven, Gradle, REST, MySQL, Postgres / Aurora, Redis / Valkey, RabbitMQ, Oracle DB, Tomcat, JBoss / WildFly, Jetty
+**Backend & Data:** Spring Boot, Hibernate, Postgres / Aurora, Redis / Valkey, RabbitMQ, MySQL, Maven, Gradle, REST, Oracle DB, Tomcat, JBoss / WildFly, Jetty
 
 **Frontend:** JavaScript, ReactJS, AngularJS, NodeJS, HTML5 / CSS3, Bootstrap
 
-**Tooling:** Cursor, Claude, IntelliJ, Jira, Git
+**Tooling:** Cursor, Claude, IntelliJ, Jira, Git, Twingate, SonarQube
 
 ## Professional Experience
 

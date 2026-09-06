@@ -179,20 +179,26 @@ experience:
       - Smoke, functional and regression testing and test case design for Agility CRM customizations (NY Life)
 
 certifications:
-  - date: Apr. 2017
+  - date: Apr 2017
     name: AWS Certified SysOps Administrator - Associate
     issuer: Amazon Web Services
-  - date: Mar. 2017
+    credential: AWS-ASOA-7708
+    expiration: Apr 2019
+  - date: Mar 2017
     name: AWS Certified Developer - Associate
     issuer: Amazon Web Services
-  - date: Oct. 2016
+    credential: AWS-ADEV-9429
+    expiration: Mar 2019
+  - date: Oct 2016
     name: AWS Certified Solutions Architect - Associate
     issuer: Amazon Web Services
-  - date: Apr. 2011
+    credential: AWS-ASA-21935
+    expiration: Oct 2018
+  - date: Apr 2011
     name: Oracle Certified Professional, Java EE 5 Web Component Developer
     issuer: Oracle
     url: https://www.youracclaim.com/badges/ec755c8b-49e2-4e0e-8029-fbd39d246866
-  - date: Oct. 2009
+  - date: Oct 2009
     name: Sun Certified Java Programmer, Java SE 6 (SCJP)
     issuer: Sun Microsystems
 

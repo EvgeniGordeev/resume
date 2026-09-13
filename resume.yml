@@ -66,6 +66,7 @@ experience:
         highlights:
           - Cut the AWS bill 42% (about $275K per year) across three product lines with rightsizing, Karpenter in every environment and spot instances for lower environments and production workers; no incidents
           - Consolidated three product lines (75 production deployments across 4 production clusters, plus 4 non-production) onto one GitLab CI/CD and EKS foundation; 3 EKS upgrades since with zero downtime, 2 to 3 per year
+          - Authored production P0 postmortems and the database backup and EC2 maintenance runbooks
           - Took over Granular Infrastructure, an IP acquisition with no staff, on Jenkins and EKS 1.23; upgraded it to 1.31 and onto the shared pipelines without a handover
           - Migrated Traction business from Bitbucket and ECS (manual production deploys) to GitLab and EKS, with Redis to Valkey and RDS 16 to Aurora 17, via parallel environments and a DNS switch; no downtime
           - Added Elasticsearch APM and logs collection to about 15 Traction business services in 2 weeks
@@ -101,6 +102,7 @@ experience:
           - Extracted analytics into a standalone service on Postgres logical replication, refreshing reports in minutes instead of nightly; still in production in 2026
           - Replaced New Relic (4 Java apps, production only) with self-hosted Elasticsearch logs and APM for 15 apps in every environment at 87% lower cost; 2 months
           - Integrated Sentry, AWS WAF and AWS Client VPN platform-wide, and released kube-asg-node-drainer for zero-downtime node rotation of single-replica workloads
+          - Closed known CVEs through dependency and runtime upgrades across about 10 services (e.g. Log4Shell, Spring4Shell)
         env:
           tools: GitLab, AWS, Kubernetes, Helm, Elasticsearch, Sentry
           techs: Spring Boot, ReactJS, Django, Postgres

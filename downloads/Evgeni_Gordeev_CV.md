@@ -74,6 +74,7 @@ In charge of: Tech Lead for the Java farm-management platform (row crops, perman
 #### Identity, SSO and Partner API
 
 - Proposed Keycloak SSO with a 2019 proof of concept, led the build at 25% of my time with a developer at 50%, and migrated 12 web apps (2022) and 6 mobile apps (2023) with login-time user migration; no downtime; upgraded Keycloak yearly since 2022
+- Maintained the custom React account theme through every Keycloak upgrade: login, EULA, grower list and CRUD, user list and CRUD
 - Delivered a stateless partner API on AWS API Gateway that resolves API keys to SSO users and roles via token-exchange grant type, with tokens and routing managed internally
 - Designed multi-grower login so support staff no longer re-authenticates per customer
 

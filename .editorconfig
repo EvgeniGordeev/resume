@@ -1,14 +1,6 @@
-# EditorConfig helps developers define and maintain consistent
-# coding styles between different editors and IDEs
-# editorconfig.org
-
 root = true
 
 [*]
-
-# Change these settings to your own preference
-indent_style = space
-indent_size = 4
 
 # We recommend you to keep these unchanged
 end_of_line = lf
@@ -16,9 +8,18 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.md]
-trim_trailing_whitespace = false
-
-[{*.{json,sql,xml,yml,yaml}}]
+# Change these settings to your own preference
 indent_style = space
+indent_size = 4
+
+# Comments and prose wrap at 120, not 80. The comments in this repo carry the reasoning -- incident post-mortems,
+# "!!!" warnings, why-not-the-obvious-thing notes -- and 80 columns shreds that prose into twice the lines it needs.
+max_line_length = 120
+
+# !!! Make requires a literal tab to open a recipe line -- it is syntax, not style. Reindenting these with spaces
+# breaks every target ("missing separator" or a silently ignored recipe). No .RECIPEPREFIX is set anywhere.
+[{Makefile,*.mk}]
+indent_style = tab
+
+[*.{json,toml,yml,yaml,xml}]
 indent_size = 2

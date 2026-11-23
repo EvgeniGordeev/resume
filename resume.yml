@@ -43,7 +43,7 @@ skills:
     items: [ Karpenter, Helm, Docker, CloudFormation / Terraform, Elastic / Kibana APM, OpenTelemetry, Prometheus, Grafana, GCP Cloud Monitoring, Sentry, Keycloak (OIDC / SSO), API Gateway, WAF ]
   - tier: success
     label: Backend & Data
-    items: [ Spring Boot, Hibernate, Postgres / Aurora, Redis / Valkey, RabbitMQ, MySQL, Maven, Gradle, REST, GraphQL, Oracle DB, Tomcat, JBoss / WildFly, Jetty ]
+    items: [ Spring Boot, Hibernate, Postgres / Aurora, Redis / Valkey, RabbitMQ, Kafka, MySQL, Maven, Gradle, REST, GraphQL, Oracle DB, Tomcat, JBoss / WildFly, Jetty ]
   - tier: warning
     label: Frontend
     items: [ JavaScript, ReactJS, AngularJS, NodeJS, HTML5 / CSS3, Bootstrap ]
@@ -74,7 +74,7 @@ experience:
           - Built a Claude Code skill that maps every environment and cluster (logs, Elastic, Prometheus, Datadog, EKS events) so any Engineer can triage production
         env:
           tools: GitLab, AWS, EKS, Karpenter, Twingate, CrowdStrike, Elastic
-          techs: Spring Boot, NodeJS, Python, CloudFormation/Terraform, Aurora, Valkey, Keycloak
+          techs: Spring Boot, NodeJS, Python, CloudFormation/Terraform, Aurora, Valkey, Kafka, Keycloak
       - name: Open source
         highlights_as_links:
           - label: Karpenter drain flow for singleton pods (proposed upstream)

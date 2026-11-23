@@ -18,7 +18,7 @@ Drives projects from conception through production, with a focus on automation, 
 
 **Platform & Reliability:** Karpenter, Helm, Docker, CloudFormation / Terraform, Elastic / Kibana APM, OpenTelemetry, Prometheus, Grafana, GCP Cloud Monitoring, Sentry, Keycloak (OIDC / SSO), API Gateway, WAF
 
-**Backend & Data:** Spring Boot, Hibernate, Postgres / Aurora, Redis / Valkey, RabbitMQ, MySQL, Maven, Gradle, REST, GraphQL, Oracle DB, Tomcat, JBoss / WildFly, Jetty
+**Backend & Data:** Spring Boot, Hibernate, Postgres / Aurora, Redis / Valkey, RabbitMQ, Kafka, MySQL, Maven, Gradle, REST, GraphQL, Oracle DB, Tomcat, JBoss / WildFly, Jetty
 
 **Frontend:** JavaScript, ReactJS, AngularJS, NodeJS, HTML5 / CSS3, Bootstrap
 
@@ -43,7 +43,7 @@ In charge of: Conservis / Granular farm management and Traction accounting: AWS 
 - Replaced AWS Client VPN with Twingate, cutting VPN cost 55%; wrote a client that provisions users, groups, and resource roles from a YAML file through the Twingate GraphQL API
 - Built a Claude Code skill that maps every environment and cluster (logs, Elastic, Prometheus, Datadog, EKS events) so any Engineer can triage production
 
-*Tools:* GitLab, AWS, EKS, Karpenter, Twingate, CrowdStrike, Elastic | *Tech:* Spring Boot, NodeJS, Python, CloudFormation/Terraform, Aurora, Valkey, Keycloak
+*Tools:* GitLab, AWS, EKS, Karpenter, Twingate, CrowdStrike, Elastic | *Tech:* Spring Boot, NodeJS, Python, CloudFormation/Terraform, Aurora, Valkey, Kafka, Keycloak
 
 **Open source:** [Karpenter drain flow for singleton pods (proposed upstream)](https://github.com/aws/karpenter-provider-aws/pull/9158), [Karpenter drain strategy (proposed upstream)](https://github.com/kubernetes-sigs/karpenter/pull/3013)
 

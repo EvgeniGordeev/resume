@@ -63,6 +63,7 @@
         "Postgres / Aurora",
         "Redis / Valkey",
         "RabbitMQ",
+        "Kafka",
         "MySQL",
         "Maven",
         "Gradle",
@@ -127,7 +128,7 @@
           ],
           "env": {
             "tools": "GitLab, AWS, EKS, Karpenter, Twingate, CrowdStrike, Elastic",
-            "techs": "Spring Boot, NodeJS, Python, CloudFormation/Terraform, Aurora, Valkey, Keycloak"
+            "techs": "Spring Boot, NodeJS, Python, CloudFormation/Terraform, Aurora, Valkey, Kafka, Keycloak"
           }
         },
         {
